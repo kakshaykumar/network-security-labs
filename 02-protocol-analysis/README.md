@@ -64,5 +64,3 @@ Initiated a video call and captured RTP packets between local device (`192.168.1
 ---
 
 → [Full protocol-by-protocol analysis with security notes](protocol-observations.md)
-
----
