@@ -66,15 +66,3 @@ Initiated a video call and captured RTP packets between local device (`192.168.1
 → [Full protocol-by-protocol analysis with security notes](protocol-observations.md)
 
 ---
-
-## Screenshot Guide
-
-> Add your screenshots to the `assets/` folder with these exact filenames:
-
-| Filename | What it should show |
-|---|---|
-| `wireshark-install-success.png` | The "The installation was successful" screen from Wireshark setup |
-| `wireshark-capture-overview.png` | Wireshark open with the Wi-Fi interface selected, before or during capture |
-| `wireshark-icmp-capture.png` | The packet list filtered to ICMP showing echo requests and replies between 192.168.1.152 and 8.8.8.8 |
-| `wireshark-tls-capture.png` | TLS packets visible — look for TLSv1.2 and TLSv1.3 in the Protocol column |
-| `wireshark-full-capture.png` | The full unfiltered capture list showing the mix of protocols (the main screenshot from your PDF) |
