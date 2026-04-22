@@ -78,5 +78,3 @@ Initiated a video call and captured RTP packets between local device (`192.168.1
 | `wireshark-icmp-capture.png` | The packet list filtered to ICMP showing echo requests and replies between 192.168.1.152 and 8.8.8.8 |
 | `wireshark-tls-capture.png` | TLS packets visible — look for TLSv1.2 and TLSv1.3 in the Protocol column |
 | `wireshark-full-capture.png` | The full unfiltered capture list showing the mix of protocols (the main screenshot from your PDF) |
-
-> **Tip:** If you have the original PCAP file saved, add it to this folder too as `capture.pcapng` — it's a valuable artifact and anyone reviewing your portfolio can open it in their own Wireshark.
