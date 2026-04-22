@@ -68,18 +68,3 @@ Public IP is now `129.174.182.103`, registered to George Mason University in Arl
 ---
 
 → [Full technical analysis — NAT mechanics, VPN tunneling, BGP/ASN breakdown](nat-vpn-analysis.md)
-
----
-
-## Screenshot Guide
-
-> Add your screenshots to the `assets/` folder with these exact filenames:
-
-| Filename | What it should show |
-|---|---|
-| `ifconfig-before-vpn.png` | Terminal window showing ifconfig output with `inet 192.168.1.152` highlighted |
-| `public-ip-before-vpn.png` | whatismyipaddress.com showing 173.66.13.41, Verizon Business, Fairfax VA |
-| `ifconfig-after-vpn.png` | Terminal window showing ifconfig output with `inet 10.151.204.231` highlighted |
-| `public-ip-after-vpn.png` | whatismyipaddress.com showing 129.174.182.103, George Mason University, Arlington VA |
-
-> **Tip:** If you have the screenshots showing the full terminal session (the `akshaykumarkathirvelu — -zsh` window), those are better than cropped ones — they show the real terminal context.
