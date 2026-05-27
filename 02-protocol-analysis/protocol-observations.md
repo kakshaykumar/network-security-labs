@@ -6,6 +6,8 @@
 
 ---
 
+**Key finding:** Active packet-level visibility across protocol layers provides detection coverage that log-only or passive monitoring approaches miss, particularly for encrypted sessions and real-time media traffic.
+
 ## ICMP — Internet Control Message Protocol
 
 **Test:** Pinged Google's public DNS server (`8.8.8.8`) from terminal using `ping 8.8.8.8`
