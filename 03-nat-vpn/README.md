@@ -12,7 +12,7 @@
 | **Local IP** | `192.168.1.152` | `10.151.204.231` |
 | **Subnet Mask** | `255.255.255.0` (/24) | `255.255.128.0` (/17) |
 | **Default Gateway** | `192.168.1.1` | `10.151.255.1` |
-| **Public IP** | `173.66.13.41` | `129.174.182.103` |
+| **Public IP** | `173.66.x.x` | `129.174.182.103` |
 | **ISP** | Verizon Business | George Mason University |
 | **ASN** | 701 | GMU |
 | **Location** | Fairfax, VA | Arlington, VA |
@@ -37,9 +37,9 @@ en0: inet 192.168.1.152 netmask 0xffffff00 broadcast 192.168.1.255
 
 Checked public IP via `whatismyipaddress.com`.
 
-![whatismyipaddress.com showing 173.66.13.41 — Verizon Business, Fairfax VA](assets/public-ip-before-vpn.png)
+![whatismyipaddress.com showing 173.66.x.x — Verizon Business, Fairfax VA](assets/public-ip-before-vpn.png)
 
-Public IP `173.66.13.41` belongs to Verizon Business (ASN 701, Fairfax VA). This is the address the internet sees for all traffic leaving the home network — NAT on the home router maps every device's private address to this single public IP.
+Public IP `173.66.x.x` belongs to Verizon Business (ASN 701, Fairfax VA). This is the address the internet sees for all traffic leaving the home network — NAT on the home router maps every device's private address to this single public IP.
 
 ---
 
