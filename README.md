@@ -6,7 +6,7 @@
 
 This repo contains hands-on lab work from my Cybersecurity Fundamentals course covering three core areas: vulnerability scanning, traffic analysis, and network address management. All three labs were run against live environments — real scan results, real packet captures, real terminal output.
 
-I came into this course with a network engineering background and hands-on experience with tools like Nessus, Wireshark, Qualys, SolarWinds, and NMap. These labs were a chance to use those tools in a more structured, documentation-focused way and think deliberately about what the findings mean from a security standpoint — not just what the tool says, but why it matters.
+I came into this course with a network engineering background and hands-on experience with tools like Nessus, Wireshark, Qualys, and Nmap. These labs were a chance to use those tools in a more structured, documentation-focused way and think deliberately about what the findings mean from a security standpoint — not just what the tool says, but why it matters.
 
 ---
 
@@ -52,7 +52,7 @@ Used `ifconfig` to capture my local network config, verified my public IP via `w
 
 **Before VPN:**
 - Local: `192.168.1.152` — private /24, home network (Verizon)
-- Public: `173.66.13.41` — Verizon Business, Fairfax VA, ASN 701
+- Public: `173.66.x.x` — Verizon Business, Fairfax VA, ASN 701
 
 **After VPN:**
 - Local: `10.151.204.231` — private /17, VPN-assigned subnet
