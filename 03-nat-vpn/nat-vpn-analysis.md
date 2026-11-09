@@ -36,12 +36,12 @@ en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
 
 | Parameter | Value |
 |---|---|
-| Public IP | `173.66.13.41` |
+| Public IP | `173.66.x.x` |
 | ISP | Verizon Business |
 | ASN | 701 |
 | Location | Fairfax, VA |
 
-`173.66.13.41` is the address that the rest of the internet sees when my device makes a connection. This is the IP assigned to my home router's WAN interface by Verizon. My router is performing NAT — translating my private `192.168.1.152` address to this single public IP for all outbound traffic.
+`173.66.x.x` is the address that the rest of the internet sees when my device makes a connection. This is the IP assigned to my home router's WAN interface by Verizon. My router is performing NAT — translating my private `192.168.1.152` address to this single public IP for all outbound traffic.
 
 ASN 701 belongs to Verizon Business's network. ASNs are used in BGP routing to identify autonomous systems — large blocks of IP addresses managed by a single organization.
 
@@ -88,9 +88,9 @@ My traffic is now egressing through GMU's network infrastructure. From the persp
 
 When the VPN connects, it creates a virtual network interface (`utun` on macOS) and the VPN server assigns a new private IP address from its own subnet. My device now has two private IPs simultaneously — the original `192.168.1.152` for local network traffic, and `10.151.204.231` for VPN-tunneled traffic. The VPN client routes internet-bound traffic through the tunnel interface, so applications use the VPN-assigned address for all external connections.
 
-**Public IP change (`173.66.13.41` → `129.174.182.103`)**
+**Public IP change (`173.66.x.x` → `129.174.182.103`)**
 
-Before VPN: `my device (192.168.1.152)` → `home router NAT (173.66.13.41)` → internet
+Before VPN: `my device (192.168.1.152)` → `home router NAT (173.66.x.x)` → internet
 
 After VPN: `my device (192.168.1.152)` → `encrypted tunnel` → `GMU VPN server (129.174.182.103)` → internet
 
@@ -100,7 +100,7 @@ The VPN encapsulates my traffic in an encrypted tunnel to GMU's VPN server. GMU'
 
 NAT is doing two separate jobs in this setup:
 
-1. **Home router NAT** — translates `192.168.1.152` (and every other device on my home network) to the single public IP `173.66.13.41`. This is standard residential NAT.
+1. **Home router NAT** — translates `192.168.1.152` (and every other device on my home network) to the single public IP `173.66.x.x`. This is standard residential NAT.
 
 2. **VPN server NAT** — at the GMU end, the VPN server performs NAT to translate my VPN-assigned `10.151.204.231` to GMU's public IP before forwarding to the internet.
 
@@ -125,7 +125,7 @@ What the VPN doesn't hide: GMU's VPN server sees all my traffic in cleartext (af
 | Concept | What the Lab Showed |
 |---|---|
 | RFC 1918 private addressing | `192.168.x.x` (home) and `10.x.x.x` (VPN) are both private ranges |
-| NAT | Single public IP (`173.66.13.41`) represents all devices on home network |
+| NAT | Single public IP (`173.66.x.x`) represents all devices on home network |
 | VPN tunnel | Traffic encrypted between device and GMU VPN server |
 | IP reassignment via VPN | New private address (`10.151.204.231`) assigned by VPN server |
 | Public IP masking | Destination sees GMU's IP, not Verizon's |
